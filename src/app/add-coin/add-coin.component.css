@@ -63,10 +63,9 @@ set_button{
   width: 83%;
 
   height: 700px;
-  margin-left: 17%;
+  margin-left: 20%;
   margin-top: -50px;
   position: absolute;
-  border: 1px solid rgb(136, 134, 134);
   overflow-x: scroll;
   color: rgb(145, 143, 143);
   

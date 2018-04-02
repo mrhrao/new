@@ -3,9 +3,9 @@
 
     <div class="form_container">
         <h3 class="for_h1">Register Here</h3>
-        <form class="form1" action="" (ngSubmit)="submitSignUp()" #signUpForm="ngForm" method="get" name="SignUp">
+        <form class="form1" (ngSubmit)="submitSignUp()" #signUpForm="ngForm" method="get" name="SignUp">
 
-            <input class="input_top_radius" [(ngModel)]="formData.userName" pattern="[a-zA-Z][a-zA-Z ]+" #fullName="ngModel" type="text"
+            <input class="input_top_radius" [(ngModel)]="formData.userName" pattern="[a-zA-Z][a-zA-Z ]+" #userName="ngModel" type="text"
                 name="userName" placeholder="username" minlength="3" maxlength="25" [ngClass]="{'error':userName.errors && userName.touched}"
                 required="" autofocus="" />
 

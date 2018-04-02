@@ -9,33 +9,45 @@
 /*continer for routing secrtion */
 .container{
   z-index: 2;
-  width: 83%;
-  margin-left: 17%;
+  width: 80%;
+  margin-left: 20%;
   padding: 0px;
   margin-top: -130px;
   position: absolute;
-  border: 1px solid rgb(136, 134, 134);
+  border: 0px ;
   overflow-x: scroll;
   color: rgb(145, 143, 143); 
 }
 
 .sub_container{
   padding: 5px;
+  margin-top: 100px;
   
 }
 /*short by email, loction, and number*/
 .short_by_email, .short_by_location, .short_by_number{
-  width: 200px;
+  width: 150px;
   height: 35px;
   font-size: 15px;
 }
 
 .container input[type="text"], input[type="date"]{
-  width: 200px;
+  width: 150px;
   height: 35px;
   font-size: 15px;
   padding-left: 5px;
 }
+
+.search_button2{
+    width: 65px;
+    height: 35px;
+    font-size: 15px;
+    padding-left: 5px;
+    text-align: center;
+    color: black;
+ 
+}
+
 
 /*class for total class*/
 .total_user{
@@ -108,7 +120,7 @@ ul{
 }
 /*all li width*/
 .container ul li{
-  width: 200px;
+  width: 150px;
   float: left;
 }
 /*hover effect for all li*/
