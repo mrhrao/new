@@ -1,6 +1,6 @@
 
   .logo_serach_container{
-    width: 17%;
+    width: 100%;
   }
   
   logo_container{
@@ -54,7 +54,7 @@
     list-style-type: none;
   }
   .dropdown {
-    width: 17%;
+    width: 20%;
     position: absolute;
     display: inline-block;
     background-color: #9d9d9d;

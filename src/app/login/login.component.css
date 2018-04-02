@@ -1,5 +1,7 @@
 /*common css for all page*/
-
+a:hover{
+    color:#9B7785;
+}
     /*css for laptop and large screen*/
 
     @media screen and (min-width: 900px) {
@@ -97,8 +99,10 @@
             border-left: 5px solid #a94442; /* red */
           }
 
+        .red, .error{
+          margin-left: 10%;
+        }  
         .for_error{
-            text-align: center;
             color: red;
             font-size: 16px;
         } 
@@ -245,6 +249,10 @@
         .ng-invalid:not(form)  {
             border-left: 5px solid #a94442; /* red */
           }
+
+        .red, .error{
+            margin-left: 10%;
+          } 
 
         .for_error{
             text-align: center;
@@ -396,7 +404,9 @@
         .ng-invalid:not(form)  {
             border-left: 5px solid #a94442; /* red */
           }
-
+        .red, .error{
+          margin-left: 10%;
+        } 
         .for_error{
             text-align: center;
             color: red;
@@ -545,7 +555,9 @@
         .ng-invalid:not(form)  {
             border-left: 5px solid #a94442; /* red */
           }
-
+        .red, .error{
+            margin-left: 10%;
+          } 
         .for_error{
             text-align: center;
             color: red;
