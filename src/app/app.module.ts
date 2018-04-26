@@ -5,44 +5,43 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpModule } from '@angular/http';
 
-import { SignUpComponent } from './../../src/app/signup/signup.component';
+
+import { SignUpComponent } from './signup/signup.component';
 import { LogInComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 import { SettingComponent } from './setting/setting.component';
-import { BuyComponent } from './buy/buy.component';
-import { SellComponent } from './sell/sell.component';
-import {MainService} from './service/mainService';
-import {AddCoinComponent} from './add-coin/add-coin.component';
-import {UpdateCoinComponent} from './update-coin/update-coin.component';
-import {AdminSideMenuComponent} from './admin-side-menu/admin-side-menu.component';
-import {AdminNavComponent} from './admin-nav/admin-nav.component';
-import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
+import { UserWalletComponent } from './user-wallet/user-wallet.component';
+import { MainService} from './service/mainService';
+import { UserNavComponent} from './user-nav/user-nav.component';
+import { FooterComponent} from './footer/footer.component';
+import { HomeComponent} from './home/home.component';
+import { UserDashboardComponent} from './user-dashboard/user-dashboard.component';
+import { EqualValidator } from './confirm-password/confirm-password.directive';
+import { Bookmygain} from './bookmygain/bookmygain.component';
 
 import { importExpr } from '@angular/compiler/src/output/output_ast';
 
 
 const appRoutes: Routes = [
-  { path: 'signup', component: SignUpComponent },
+  { path: '',
+  redirectTo: '/home',
+  pathMatch: 'full'
+},
+   { path: 'signup', component: SignUpComponent },
    { path: 'login', component: LogInComponent },
-   { path: 'dashboard', component: DashboardComponent },
    { path: 'resetPassword', component: ResetPasswordComponent },
    { path: 'forgetPassword', component: ForgetPasswordComponent },
    { path: 'setting', component: SettingComponent },
-   { path: 'buy', component: BuyComponent },
-   { path: 'sell', component: SellComponent },
-   { path: 'add-coin', component: AddCoinComponent },
-   { path: 'admin-side-menu', component: AdminSideMenuComponent},
-   { path: 'update-coin', component: UpdateCoinComponent},
-   { path: 'admin-nav', component: AdminNavComponent},
-   { path: 'admin-dashboard', component: AdminDashboardComponent},
-   
-  { path: '',
-    redirectTo: '/login',
-    pathMatch: 'full'
-  },
-  { path: '**', component: LogInComponent }
+   { path: 'user-wallet', component: UserWalletComponent },
+   { path: 'user-nav', component: UserNavComponent},
+   { path: 'footer', component: FooterComponent},
+   { path: 'home', component: HomeComponent },
+   { path: 'user-dashboard', component: UserDashboardComponent},
+   { path: 'bookmygain', component: Bookmygain}, 
+ 
+  { path: '**', component: HomeComponent }
 ];
 
 
@@ -51,18 +50,16 @@ const appRoutes: Routes = [
     AppComponent,
     SignUpComponent,
     LogInComponent,
-    DashboardComponent,
     ResetPasswordComponent,
     ForgetPasswordComponent,
     SettingComponent,
-    BuyComponent,
-    SellComponent,
-    AddCoinComponent,
-    AdminSideMenuComponent,
-    AdminNavComponent,
-    AdminDashboardComponent,
-    UpdateCoinComponent,
-    
+    UserWalletComponent,
+    FooterComponent,
+    HomeComponent,
+    UserNavComponent,
+    UserDashboardComponent,
+    EqualValidator,
+    Bookmygain,
   ],
   
   imports: [
@@ -70,13 +67,23 @@ const appRoutes: Routes = [
     HttpModule,
     FormsModule,
     RouterModule.forRoot(
+      [
 
-      appRoutes,
+        {path:'home', component: HomeComponent},
+        { path: 'user-wallet', component: UserWalletComponent },
+        { path: 'user-dashboard', component: UserDashboardComponent},
+        {path:'login', component: LogInComponent},
+        { path: 'signup', component: SignUpComponent },
+        { path: 'forgetPassword', component: ForgetPasswordComponent },
+        { path: 'bookmygain', component: Bookmygain},
+
+      ]
      
     ),
     
   ],
-  providers: [MainService],
+  providers: [MainService, EqualValidator],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

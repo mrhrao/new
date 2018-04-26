@@ -11,13 +11,10 @@ export class ForgetPasswordComponent implements OnInit {
  private formData: any = {}; 
       constructor(private mainService:MainService) { } 
 
-  ngOnInit() { console.log(this.mainService.submitLogIn); 
-  
-    console.log(this.mainService.submitLogIn )
+  ngOnInit() {  
      
  } 
  ForgetPasswordComponent() {
-console.log(this.formData) 
 } 
 }
 
